@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('penduduk', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('kelas');
+            $table->string('nik');
+            $table->string('no_kk');
             $table->timestamps();
         });
     }

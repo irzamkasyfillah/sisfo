@@ -8,7 +8,7 @@
             <img class="brand-logo" alt="robust admin logo" 
             src="../../../app-assets/images/logo/logo-light-sm.png"
             >
-            <h3 class="brand-text">SISFO</h3></a></li>
+            <h3 class="brand-text">Sistem Informasi</h3></a></li>
         <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
         </ul>
     </div>
@@ -19,7 +19,7 @@
             </li>
         </ul>
         <ul class="nav navbar-nav float-right">
-            <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i><span class="badge badge-pill badge-default badge-danger badge-default badge-up">5</span></a>
+            <!-- <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i><span class="badge badge-pill badge-default badge-danger badge-default badge-up">5</span></a>
             <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                 <li class="dropdown-menu-header">
                 <h6 class="dropdown-header m-0"><span class="grey darken-2">Notifications</span></h6><span class="notification-tag badge badge-default badge-danger float-right m-0">5 New</span>
@@ -106,7 +106,7 @@
                     </div></a></li>
                 <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all messages</a></li>
             </ul>
-            </li>
+            </li> -->
             <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"><span class="avatar avatar-online"><img src="../../../app-assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></span><span class="user-name">Admin</span></a>
             <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="user-profile.html"><i class="ft-user"></i> Edit Profile</a><a class="dropdown-item" href="email-application.html"><i class="ft-mail"></i> My Inbox</a><a class="dropdown-item" href="user-cards.html"><i class="ft-check-square"></i> Task</a><a class="dropdown-item" href="chat-application.html"><i class="ft-message-square"></i> Chats</a>
                 <div class="dropdown-divider"></div><a class="dropdown-item" href="login-with-bg-image.html"><i class="ft-power"></i> Logout</a>
@@ -122,8 +122,13 @@
 <div class="main-menu menu-fixed menu-dark menu-accordion    menu-shadow " data-scroll-to-active="true">
     <div class="main-menu-content">
     <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-        <li class=" nav-item"><a href="index.html"><i class="icon-home"></i><span class="menu-title" data-i18n="nav.dash.main">Dashboard</span><span class="badge badge badge-info badge-pill float-right mr-2">5</span></a>
-        <ul class="menu-content">
+        @if (Request::segment(1) == "dashboard")
+            <li class="nav-item active">
+        @else
+            <li class="nav-item">
+        @endif
+            <a href="{{ route('dashboard.index')}}"><i class="icon-home"></i><span class="menu-title" data-i18n="nav.dash.main">Dashboard</span></a>
+        <!-- <ul class="menu-content">
             <li><a class="menu-item" href="dashboard-ecommerce.html" data-i18n="nav.dash.ecommerce">eCommerce</a>
             </li>
             <li><a class="menu-item" href="dashboard-project.html" data-i18n="nav.dash.project">Project</a>
@@ -134,8 +139,14 @@
             </li>
             <li><a class="menu-item" href="dashboard-fitness.html" data-i18n="nav.dash.fitness">Fitness</a>
             </li>
-        </ul>
+        </ul> -->
         </li>
+        @if (Request::segment(1) == "penduduk")
+            <li class="nav-item active">
+        @else
+            <li class="nav-item">
+        @endif
+            <a href="{{ route('penduduk.index')}}"><i class="icon-home"></i><span class="menu-title" data-i18n="nav.dash.main">Data Penduduk</span></a>
         <li class=" nav-item"><a href="#"><i class="icon-screen-tablet"></i><span class="menu-title" data-i18n="nav.templates.main">Surat Keluar</span></a>
         <ul class="menu-content">
             @if (Request::segment(1) == "surat-keterangan-usaha")
@@ -159,7 +170,7 @@
             </li>
         </ul>
         </li>
-        <li class=" navigation-header"><span data-i18n="nav.category.layouts">Layouts</span><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
+        <!-- <li class=" navigation-header"><span data-i18n="nav.category.layouts">Layouts</span><i class="ft-more-horizontal ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Layouts"></i>
         </li>
         <li class=" nav-item"><a href="#"><i class="icon-layers"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Page layouts</span></a>
         <ul class="menu-content">
@@ -761,7 +772,7 @@
         </ul>
         </li>
         <li class=" nav-item"><a href="animation.html"><i class="icon-refresh spinner"></i><span class="menu-title" data-i18n="nav.animation.main">Animation</span></a>
-        </li>
+        </li> -->
     </ul>
     </div>
 </div>

@@ -41,13 +41,14 @@ class PendudukController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'kelas' => 'required',
+            'nik' => 'required',
+            'no_kk' => 'required',
         ]);
       
         Penduduk::create($request->all());
        
         return redirect()->route('penduduk.index')
-                        ->with('success','Student created successfully.');
+                        ->with('success','Data penduduk berhasil ditambahkan');
     }
 
     /**
@@ -83,13 +84,14 @@ class PendudukController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'kelas' => 'required',
+            'nik' => 'required',
+            'no_kk' => 'required',
         ]);
       
         $penduduk->update($request->all());
       
         return redirect()->route('penduduk.index')
-                        ->with('success','Student updated successfully');
+                        ->with('success','Data penduduk berhasil di-update');
     }
 
     /**
@@ -103,6 +105,6 @@ class PendudukController extends Controller
         $penduduk->delete();
        
         return redirect()->route('penduduk.index')
-                        ->with('success','Student deleted successfully');
+                        ->with('success','Data penduduk berhasil dihapus');
     }
 }

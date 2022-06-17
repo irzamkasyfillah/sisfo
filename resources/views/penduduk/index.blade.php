@@ -7,28 +7,32 @@
             <div class="card-content">
                 <div class="card-body">
                     <div class="row">
+
+                        @if ($message = Session::get('success'))
+                            <div class="col-lg-12 alert alert-success">
+                                <p style="color: white">{{ $message }}</p>
+                            </div>
+                        @endif
+
                         <div class="col-lg-12 margin-tb">
                             <div class="float-start">
-                                <h2>Laravel 9 CRUD School Application</h2>
+                                <h2>Data Penduduk</h2>
                             </div>
                             <div class="float-end">
-                                <a class="btn btn-success" href="{{ route('penduduk.create') }}"> Create New student</a>
+                                <a class="btn btn-success" href="{{ route('penduduk.create') }}"> Tambah Data Penduduk</a>
                             </div>
                         </div>
                     
-                        @if ($message = Session::get('success'))
-                            <div class="alert alert-success">
-                                <p>{{ $message }}</p>
-                            </div>
-                        @endif
+                        
 
                         <div class="col-lg-12 margin-tb mt-1">
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Name</th>
-                                        <th>Kelas</th>
+                                        <th>Nama</th>
+                                        <th>NIK</th>
+                                        <th>No. KK</th>
                                         <th width="280px">Action</th>
                                     </tr>
                                 </thead>
@@ -37,7 +41,8 @@
                                     <tr>
                                         <td>{{ ++$i }}</td>
                                         <td>{{ $penduduk->nama }}</td>
-                                        <td>{{ $penduduk->kelas }}</td>
+                                        <td>{{ $penduduk->nik }}</td>
+                                        <td>{{ $penduduk->no_kk }}</td>
                                         <td>
                                             <form action="{{ route('penduduk.destroy',$penduduk->id) }}" method="POST">
                             
