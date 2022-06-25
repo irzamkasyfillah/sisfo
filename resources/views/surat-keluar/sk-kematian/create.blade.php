@@ -24,7 +24,7 @@
     </div>
 @endif
    
-<form action="{{ route('surat-keterangan-usaha.download') }}" method="POST">
+<form action="{{ route('surat-keterangan-kematian.download') }}" method="POST">
     @csrf
   
      <div class="row mt-2">
@@ -42,24 +42,8 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>NIK</strong>
-                <input class="form-control" name="nik" placeholder=""></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <fieldset class="form-group position-relative">
-                <strong>Jenis Kelamin</strong>
-                <select required class="form-control" name="jenis_kelamin" id="jenis_kelamin">
-                    <option value="" disabled selected>Pilih Jenis Kelamin</option>
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
-                </select>
-            </fieldset>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>Tempat/Tanggal Lahir</strong>
-                <input class="form-control" name="ttl" placeholder=""></input>
+                <input type="text" class="form-control" name="ttl" placeholder=""></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -76,13 +60,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Status Perkawinan</strong>
-                <input class="form-control" name="status" placeholder=""></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Pekerjaan</strong>
+                <strong>Pekerjaan Sebelumnya</strong>
                 <input class="form-control" name="pekerjaan" placeholder=""></input>
             </div>
         </div>
@@ -94,13 +72,37 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Bidang Usaha</strong>
-                <input class="form-control" name="bidang_usaha" placeholder=""></input>
+                <strong>Tanggal Kematian</strong>
+                <input class="form-control" name="tanggal_meninggal" placeholder=""></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Tanggal TTD</strong>
+                <strong>Tempat Kematian</strong>
+                <input type="text" class="form-control" name="tempat_meninggal" placeholder="contoh : Rumah"></input>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Penyabab Kematian</strong>
+                <input class="form-control" name="penyebab_meninggal" placeholder="contoh : penyakit komplikasi"></input>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Tanggal dikebumikan</strong>
+                <input class="form-control" name="tanggal_dikebumikan" placeholder=""></input>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Tempat dikebumikan</strong>
+                <input class="form-control" name="tempat_dikebumikan" placeholder=""></input>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Tanggal TTD di Surat</strong>
                 <input class="form-control" name="tanggal" placeholder=""></input>
             </div>
         </div>

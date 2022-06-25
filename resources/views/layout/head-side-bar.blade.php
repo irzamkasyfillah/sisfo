@@ -164,9 +164,9 @@
             <li class="{{ Request::segment(1) == 'surat-keterangan-belum-menikah' ? 'active' : '' }}">
                 <a class="menu-item" href="{{ route('surat-keterangan-belum-menikah.create') }}" data-i18n="nav.templates.horz.main">SK Belum Menikah</a>
             </li>
-            <li class="{{ Request::segment(1) == 'surat-keterangan-ahli-waris' ? 'active' : '' }}">
+            <!-- <li class="{{ Request::segment(1) == 'surat-keterangan-ahli-waris' ? 'active' : '' }}">
                 <a class="menu-item" href="{{ route('surat-keterangan-ahli-waris.create') }}" data-i18n="nav.templates.horz.main">SK Ahli Waris</a>
-            </li>
+            </li> -->
             <li class="{{ Request::segment(1) == 'surat-keterangan-tidak-mampu' ? 'active' : '' }}">
                 <a class="menu-item" href="{{ route('surat-keterangan-tidak-mampu.create') }}" data-i18n="nav.templates.horz.main">SK Tidak Mampu</a>
             </li>

@@ -24,7 +24,7 @@
     </div>
 @endif
    
-<form action="{{ route('surat-keterangan-usaha.download') }}" method="POST">
+<form action="{{ route('surat-keterangan-domisili.download') }}" method="POST">
     @csrf
   
      <div class="row mt-2">
@@ -94,13 +94,13 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Bidang Usaha</strong>
-                <input class="form-control" name="bidang_usaha" placeholder=""></input>
+                <strong>Domisili sejak Tahun</strong>
+                <input class="form-control" name="tahun" placeholder=""></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Tanggal TTD</strong>
+                <strong>Tanggal TTD di Surat</strong>
                 <input class="form-control" name="tanggal" placeholder=""></input>
             </div>
         </div>

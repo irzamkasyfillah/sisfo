@@ -24,7 +24,7 @@
     </div>
 @endif
    
-<form action="{{ route('surat-keterangan-usaha.download') }}" method="POST">
+<form action="{{ route('surat-keterangan-tidak-mampu.download') }}" method="POST">
     @csrf
   
      <div class="row mt-2">
@@ -42,8 +42,8 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>NIK</strong>
-                <input class="form-control" name="nik" placeholder=""></input>
+                <strong>Tempat/Tanggal Lahir</strong>
+                <input class="form-control" name="ttl" placeholder=""></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -58,26 +58,8 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Tempat/Tanggal Lahir</strong>
-                <input class="form-control" name="ttl" placeholder=""></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Kewarganegaraan</strong>
-                <input class="form-control" name="negara" placeholder=""></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>Agama</strong>
                 <input class="form-control" name="agama" placeholder=""></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Status Perkawinan</strong>
-                <input class="form-control" name="status" placeholder=""></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -88,19 +70,37 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Nama Ayah</strong>
+                <input class="form-control" name="nama_ayah" placeholder=""></input>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Tempat/Tanggal Lahir Ayah</strong>
+                <input class="form-control" name="ttl_ayah" placeholder=""></input>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Agama Ayah</strong>
+                <input class="form-control" name="agama_ayah" placeholder=""></input>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Pekerjaan Ayah</strong>
+                <input class="form-control" name="pekerjaan_ayah" placeholder=""></input>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Alamat</strong>
                 <input class="form-control" name="alamat" placeholder=""></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Bidang Usaha</strong>
-                <input class="form-control" name="bidang_usaha" placeholder=""></input>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Tanggal TTD</strong>
+                <strong>Tanggal TTD di Surat</strong>
                 <input class="form-control" name="tanggal" placeholder=""></input>
             </div>
         </div>

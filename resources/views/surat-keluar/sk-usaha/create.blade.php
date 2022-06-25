@@ -100,7 +100,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Tanggal TTD</strong>
+                <strong>Tanggal TTD di Surat</strong>
                 <input class="form-control" name="tanggal" placeholder=""></input>
             </div>
         </div>
